@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>My Family Book</title>
+    </head>
+
+    <body>
+      <center><h1> My family Book </h1>
+        <br>
+        <br>
+        <img id="imgrep" height="265px" width="200px" style="border: solid ; border-radius: 10;" src="Family cover Page.jpeg">
+        <br> 
+        <br>
+        <div id="divs"> My Awesome Family #MyFam....</div>
+        <button id="button" onclick="move()"> Next </button>
+      </center>
+        
+        <script>
+            var img = [ 
+                "Family cover Page.jpeg",
+                "Hibba_.jpg",
+                "Karishma_Mamma.jpg",
+                "Faiyaz_Abbu.jpg",
+                "Sugar_cat.jpg"
+            ];
+
+            var names = [
+                "My Awesome Family #MyFam....",
+                "Hibba Shaikh (me!!)",
+                "Karishma Shaikh (Mom)",
+                "Faiyaz Shaikh (Dad)",
+                "Sugar Shaikh (Pet)"
+            ];
+
+            console.log(img);
+            console.log(names);
+
+var i= 0;
+
+function move( ){ 
+  i++;
+  var no_of_members_in_array = 4;
+  if(i > no_of_members_in_array)
+  {
+    i=0;
+  }
+
+  var updatedImage = img[i];
+  var updatedName  = names[i];
+  document.getElementById("imgrep").src = updatedImage;
+  document.getElementById("divs").innerHTML = updatedName;
+
+}
+ 
+        </script>
+    </body>
+</html>
